@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "94967e13-1381-4ddd-9438-6d26ddcdd25a",
+		"name": "ex10HalRepository2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34592708"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"JavaScript\",\r\n    \"firstAppearance\":\"1985-02-05\",\r\n    \"inventor\": \"Me, Mario\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/repo-prog-language",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repo-prog-language"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all paged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/repo-prog-language?page=0&size=2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repo-prog-language"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update one",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Java\",\r\n    \"firstAppearance\": \"1985-02-05\",\r\n    \"inventor\": \"No, it's me Gabriel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/repo-prog-language/3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repo-prog-language",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
